@@ -9,12 +9,14 @@
 <body>
     <div id="wrapper">
         <div id="content">
-            <p>As you hold the lantern, your fingers gently trace the ribbon. You notice something faintly etched into the fabric. The words are small, almost invisible, but as you tilt the ribbon, they come into focus. The writing is delicate, and the ink seems to have bled slightly. Its faint <a href="message.html">message</a> appears to be in an elegant style, but it's uneven, like it was hurriedly written.</p>
+            <p>As you hold the lantern, your fingers gently trace the ribbon. You notice something faintly etched into the fabric. The words are small, almost invisible, but as you tilt the ribbon, they come into focus. The writing is delicate, and the ink seems to have bled slightly. Its faint <a class="content-link" href="message.html" onclick="ribbon()">message</a> appears to be in an elegant style, but it's uneven, like it was hurriedly written.</p>
         </div>
         <div id="options">
             <span>&#9656</span>
-            <a href="03.html">Return.</a>
+            <a href="03.html" onclick="option(this)">Return.</a>
         </div>
     </div>
+
+    <script src="/js/story.js"></script>
 </body>
 </html>

@@ -9,12 +9,30 @@
 <body>
     <div id="wrapper">
         <div id="content">
-            <p>You awaken in the heart of a bamboo forest. Your thoughts are sluggish, tangled in the fog around you. You grasp for memories but find nothing. Above, the sky is covered by a thick fog, and the towering stalks of bamboo sway gently. The air hangs with moisture, and the ground beneath you is soft and mossy. A small stone figure sits on the side of the path; it's a <a href="panda.html">panda</a>, carved with meticulous details.</p>
+            <p>You awaken in the heart of a bamboo forest. Your thoughts are sluggish, tangled in the fog around you. You grasp for memories but find nothing. Above, the sky is covered by a thick fog, and the towering stalks of bamboo sway gently. The air hangs with moisture, and the ground beneath you is soft and mossy. A small stone figure sits on the side of the path; it's a <a class="content-link" href="panda.html">panda</a>, carved with meticulous details.</p>
         </div>
         <div id="options">
             <span>&#9656</span>
-            <a href="02.html">Follow the Path</a>
+            <a href="02.html" onclick="option01(this)">Follow the path</a>
         </div>
     </div>
+
+    <script>
+        if(localStorage.getItem("array") === null) {
+            arr = [];
+        } else {
+            arr = JSON.parse(localStorage.getItem("array"));
+        }
+        
+        function option01(element) {            
+            let option01 = element.innerHTML;
+            arr[arr.length] = `<span>&#9656</span>${option01}`;
+            localStorage.setItem("array", JSON.stringify(arr));
+        }
+
+        let content01 = document.getElementById("content").innerHTML;
+        arr[arr.length] = content01;
+        localStorage.setItem("array", JSON.stringify(arr));
+    </script>
 </body>
 </html>

@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Wandering</title>
+
+    <style>
+        body {
+            animation: fadeIn 5s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
  </head>
  <body>
-    <div id="wrapper">
+    <div id="home-page">
         <div id="content">
-            <h1>Wandering</h1>
-            <a href="html/01.html">Begin the Journey</a>
+            <h1>WANDERING</h1>
+            <a href="html/01.html"><p>Begin the Journey</p></a>
         </div>
     </div>
+
+    <script>
+        localStorage.clear();
+        console.log("clear");
+        console.log(localStorage.length);
+    </script>
  </body>
  </html>
