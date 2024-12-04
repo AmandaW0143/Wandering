@@ -131,6 +131,10 @@ a {
 #collection #options {
     margin: 30px 0px 50px 0px;
 }
+
+#collection .collImg {
+    width: 150px;
+}
 /* collections end */
 
 /* print start */
